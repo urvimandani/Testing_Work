@@ -1,0 +1,341 @@
+Q-1 W.A.J.P to Take three numbers from the user and print the greatest Number.
+package com.program;
+
+public class Greatestnumber 
+{
+	public static void main(String[] args) 
+	{
+		int a=30;
+		int b=20;
+		int c=60;
+		
+		if (a>b)
+		{
+			if(a>c)
+				System.out.println(a);
+			
+			else
+			{
+				System.out.println(c);
+			}
+		}
+		else
+		{
+			if(b>c)
+				System.out.println(b);
+			else
+			{
+				System.out.println(c);
+			}
+		}
+			
+		
+	}
+Q -2 W.A.J.P in Java to display the first 10 natural numbers using while loop.
+ public class WhileLoopEx 
+{
+	public static void main(String[] args) 
+	{
+		
+		int i=1;
+		
+		while(i<=10)
+		{
+			System.out.println(i);
+			i++;
+		}
+		
+	}
+
+}
+
+Q-3 W.A.J.P to find factorial for Given Number.
+package com.program;
+
+public class FactorialEx 
+{
+	public static void main(String[] args) 
+	{
+		int num =7;
+		int factorial =1;
+		
+		for(int i=1;i<=num;i++)
+		{
+			factorial=factorial*i;
+		}
+		System.out.println("Factorial Number is:" +factorial);
+		
+		
+	}
+}
+
+Q -4 W.A.J.P to check given number is Prime or not?
+package com.program;
+
+public class PrimeNumber 
+{
+	public static void main(String[] args) 
+	{
+		int i,m=0,j=0;      
+		  int n=3;//it is the number to be checked    
+		  m=n/2;      
+		  if(n==0||n==1)
+		  {
+		   System.out.println(n+" is not prime number");      
+		  }
+		  else
+		  {
+		   for(i=2;i<=m;i++)
+		   {
+		    if(n%i==0)
+		    {
+		     System.out.println(n+" is not prime number");      
+		     j=1;      
+		     break;      
+		    }      
+		   }      
+		   if(j==0)  
+			   {
+			   System.out.println(n+" is prime number"); 
+			   }
+		  }//end of else  
+		}
+}
+	 
+
+Q-5 W.A.J.P to check given number is Armstrong or not?
+package com.program;
+
+public class ArmStrongNumber 
+{
+	public static void main(String[] args) 
+	{
+		int n = 370;
+		int arm = n;
+		int i,sum=0;
+		
+		while(n>0)
+		{
+			i = n%10;
+			n = n/10;
+			sum = sum + i*i*i;
+		}
+		if(arm ==sum)
+		{
+			System.out.println("Armstrong Number");
+		}
+		else
+		{
+			System.out.println("Not Armstrong Number");
+		}
+		
+		
+	}
+}
+
+Q-6 W.A.J.P for create Fibonacci Series.
+package com.program;
+
+import java.util.Scanner;
+
+public class FibonacciEx 
+{
+	public static void main(String[] args) 
+	{
+		
+		int a=0;
+		int b=1;
+		System.out.println("Enter Number");
+		Scanner sc =new Scanner(System.in);
+		int n =sc.nextInt();
+		
+		System.out.println(a+" ");
+		System.out.println(b+" ");
+		
+		for(int i=3; i<=n; i++)
+		{
+			int c=a+b;
+			a=b;
+			b=c;
+			System.out.println(c+" ");
+		}
+		
+		
+	}
+
+}
+
+Q-7 W.A.J.P to Print pattern Given Below.
+       1)
+       2)
+       3)
+       4)
+
+Q-8 WAP to compute the sum of the first 100 prime numbers.
+package com.program;
+
+public class PrimeNumbersEx2 
+{
+	public static void main(String[] args) 
+	{
+		
+		int number = 1, count, sum = 0;  
+		  
+		while(number <= 100)  
+		{  
+		count = 0;  
+		int i = 2;  
+		
+		while(i <= number/2 )  
+		{       
+		if(number % i == 0)  
+		{  
+		count++;  
+		break;  
+		}  	
+		i++;  
+		} 
+		
+		
+		if(count == 0 && number != 1 )            
+		{  
+		sum = sum + number;  
+		} 
+		number++;  
+		}   
+		System.out.println("The Sum of Prime Numbers from 1 to 100 is: " + sum);  
+	}
+}
+
+Q-9 WAP to sum values of an array.
+public class ArrayEx1 
+{
+	public static void main(String[] args) 
+	{
+		
+		int[] array = {1,2,3,4,5};
+		int length = array.length;
+		int sum = 0;
+		
+		for(int i=0;i<length;i++)
+		{
+			sum = sum + array[i];
+		}
+		
+		System.out.println("sum of elements of array :"+sum);
+		float average =sum/length;
+		System.out.println("average of elements of array :"+average);
+		
+		
+		
+	}
+
+}
+
+Q-10 WAP to find the index of an array element.
+package com.program;
+
+import java.util.Scanner;
+
+public class IndexofArray 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {2,5,4,6,7,8,1};
+		
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the index position to get element");
+		int index = sc.nextInt();
+		
+		for(int i=0;i<a.length;i++)
+		{
+			if(index==i)
+			{
+				System.out.println(a[i]);
+			}
+			
+		}
+		
+	}
+
+}
+
+Q-11WAP to find the maximum and minimum value of an array.
+package com.program;
+
+public class MaxiandMiniValueofArray 
+{
+	public static void main(String[] args) 
+	{
+		int arr[] = {12,34,10,87,65};
+		
+		int min = arr[0];
+		int max = arr[0];
+		
+		for(int i=0; i<arr.length; i++)
+		{
+			if(arr[i]<min)
+			{
+				min = arr[i];
+			}
+			if(arr[i]>max)
+			{
+				max = arr[i];
+			}
+		}
+		
+		System.out.println(" Minimum " + min + " Maximum " + max);
+	}
+}
+
+Q-12 WAP to Compare Two String.
+package com.program;
+
+public class CompareToString 
+{
+	public static void main(String[] args) 
+	{
+		String s1="Java";
+		String s2=new String("Java");
+		String s3="Hello";
+		
+		System.out.println(s1.compareTo(s2));
+		System.out.println(s1.compareTo(s3));
+		
+	}
+}
+
+Q-13 WAP to concatenate a given string to the end of another string.
+package com.program;
+
+public class ConcatenateString 
+{
+	public static void main(String[] args) 
+	{
+		String s1 ="Hello";
+		String s2 ="Hello";
+		String s3 ="Java";
+		
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equals(s3));
+		
+	}
+
+}
+
+Q-14 WAP to demonstrate try catch block.
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
